@@ -6,8 +6,11 @@ const Introduct = () => {
     <section className="introdict">
       <div className="container">
         <div className="introdict-about">
-          <h1>Introduction</h1>
-          <p>Welcome to my portfolio</p>
+          <h1>
+            Hi, I am <br />
+            Olha Kondratenko
+          </h1>
+          <p>Frontend Developer</p>
           <div className="introdict-btns">
             <div className="introdict-btn accent">
               <a href="">Download CV</a>

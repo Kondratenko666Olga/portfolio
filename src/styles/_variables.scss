@@ -1,45 +1,10 @@
-// кольори, шрифти, відступи тощо
+// кольори, шрифти, кнопки
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 $bg-dark: #171717;
 $text-main: #ffffff;
 $accent-color: #27ae60;
 $font-main: 'DM Sans', sans-serif;
-
-:root {
-  font-family: $font-main;
-  line-height: 1.5;
-  font-weight: 400;
-  color-scheme: light dark;
-  color: $text-main;
-  background-color: $bg-dark;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  text-decoration: inherit;
-}
-
-a:hover {
-  color: $accent-color;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
 
 button {
   border-radius: 8px;
