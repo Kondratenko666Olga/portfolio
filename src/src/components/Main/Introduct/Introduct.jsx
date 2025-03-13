@@ -1,4 +1,5 @@
 import './Introduct.scss';
+import main from '../../../../images/main.webp';
 
 const Introduct = () => {
   return (
@@ -17,7 +18,7 @@ const Introduct = () => {
           </div>
         </div>
         <div className="introdict-img">
-          <img src="" alt="Intro" />
+          <img loading="lazy" src={main} alt="Intro" />
         </div>
       </div>
     </section>

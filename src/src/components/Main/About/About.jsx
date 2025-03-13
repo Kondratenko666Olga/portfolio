@@ -1,4 +1,5 @@
 import './About.scss';
+import about from '../../../../images/icons/about.svg';
 
 const About = () => {
   return (
@@ -18,22 +19,22 @@ const About = () => {
         <div className="about-social">
           <div className="about-social__slider">
             <div className="about-social__slider-elem">
-              <img src="" alt="decoration icon" />
+              <img loading="lazy" src={about} alt="decoration icon" />
               <h3 className="slider-elem__title">Full Name</h3>
               <span>Your name goes here</span>
             </div>
             <div className="about-social__slider-elem">
-              <img src="" alt="decoration icon" />
+              <img loading="lazy" src={about} alt="decoration icon" />
               <h3 className="slider-elem__title">Email Address</h3>
               <span>Your email goes here</span>
             </div>
             <div className="about-social__slider-elem">
-              <img src="" alt="decoration icon" />
+              <img loading="lazy" src={about} alt="decoration icon" />
               <h3 className="slider-elem__title">Twitter</h3>
               <span>Your email goes here</span>
             </div>
             <div className="about-social__slider-elem">
-              <img src="" alt="decoration icon" />
+              <img loading="lazy" src={about} alt="decoration icon" />
               <h3 className="slider-elem__title">Phone</h3>
               <span>Your name goes here</span>
             </div>

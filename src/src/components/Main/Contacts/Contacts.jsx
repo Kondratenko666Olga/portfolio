@@ -16,7 +16,7 @@ const Contacts = () => {
               <input type="text" placeholder="Phone number" />
             </div>
             <textarea placeholder="Message"></textarea>
-            <button type="submit"></button>
+            <button type="submit">Submit now</button>
           </form>
         </div>
       </div>
