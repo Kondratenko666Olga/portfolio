@@ -1,5 +1,5 @@
 import './About.scss';
-import about from '../../../../images/icons/about.svg';
+import about from '../../../images/icons/about.svg';
 
 const About = () => {
   return (

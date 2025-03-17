@@ -1,5 +1,7 @@
 @use 'variables' as *;
 @use './modules/app';
+@use './mixins.scss';
+
 /* Основний файл SCSS */
 
 * {

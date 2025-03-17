@@ -1,7 +1,7 @@
 import './Services.scss';
-import services1 from '../../../../images/icons/services1.svg';
-import services2 from '../../../../images/icons/services2.svg';
-import services3 from '../../../../images/icons/services3.svg';
+import services1 from '../../../images/icons/services1.svg';
+import services2 from '../../../images/icons/services2.svg';
+import services3 from '../../../images/icons/services3.svg';
 
 const Services = () => {
   return (

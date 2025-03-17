@@ -1,5 +1,5 @@
 import './Header.scss';
-import logo from '../../../images/logo.webp';
+import logo from '../../images/logo.webp';
 
 const Header = () => {
   return (

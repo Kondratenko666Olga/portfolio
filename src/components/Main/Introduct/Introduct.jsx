@@ -1,5 +1,5 @@
 import './Introduct.scss';
-import main from '../../../../images/main.webp';
+import main from '../../../images/main.webp';
 
 const Introduct = () => {
   return (
