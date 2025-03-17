@@ -1,0 +1,22 @@
+@import '../../../styles/mixins.scss';
+
+header {
+  .container {
+    @include flex(row, space-between, center);
+  }
+}
+
+.menu-mob {
+  @include flex(column, center, start);
+}
+.menu {
+  display: none;
+}
+@media (max-width: 768px) {
+  .menu {
+    @include flex(row, space-between, center);
+    width: 100%;
+    max-width: 330px;
+    display: none;
+  }
+}
