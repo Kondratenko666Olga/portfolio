@@ -8,6 +8,23 @@ header {
 
 .menu-mob {
   @include flex(column, center, center);
+  display: none;
+}
+.burger svg{
+  cursor: pointer;
+  &:hover,
+  &:active {
+    stroke: #27ae60;
+    path {
+      stroke: #fff;
+    };
+    g[id="SVGRepo_bgCarrier"] path {
+      fill: #27ae60;
+    };
+  }
+}
+.active {
+  display: flex;
 }
 .menu {
   display: none;
