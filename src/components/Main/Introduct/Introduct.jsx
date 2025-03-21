@@ -12,10 +12,10 @@ const Introduct = () => {
           </h1>
           <p>Frontend Developer</p>
           <div className="introdict-btns">
-            <div className="introdict-btn accent">
+            <div className="accent">
               <a href="">Download CV</a>
             </div>
-            <div className="introdict-btn">
+            <div>
               <a href="#contacts">Contact me</a>
             </div>
           </div>
