@@ -1,5 +1,4 @@
 @use 'variables' as *;
-@use './modules/app';
 @forward './mixins.scss';
 
 /* Основний файл SCSS */
@@ -8,7 +7,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  border: 1px solid red;
 }
 
 :root {
