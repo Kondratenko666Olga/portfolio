@@ -3,7 +3,7 @@
 header {
   padding: 15px 0;
   .container {
-    @include flex(row, space-between, center);
+    @include flex(row, space-between, center, nowrap, 0);
   }
 }
 
@@ -33,6 +33,7 @@ header {
 .menu {
   display: none;
   @media (min-width: 768px) {
+    @include flex (row, center, center,nowrap, 20px);
     width: 100%;
     max-width: 330px;
     display: flex;
