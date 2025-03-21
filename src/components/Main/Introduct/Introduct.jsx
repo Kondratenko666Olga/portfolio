@@ -3,15 +3,15 @@ import main from '../../../images/main.webp';
 
 const Introduct = () => {
   return (
-    <section className="introdict">
+    <section className="introduct">
       <div className="container">
-        <div className="introdict-about">
+        <div className="introduct-about">
           <h1>
             Hi, I am <br />
             Olha Kondratenko
           </h1>
           <p>Frontend Developer</p>
-          <div className="introdict-btns">
+          <div className="introduct-btns">
             <div className="accent">
               <a href="">Download CV</a>
             </div>
@@ -20,7 +20,7 @@ const Introduct = () => {
             </div>
           </div>
         </div>
-        <div className="introdict-img">
+        <div className="introduct-img">
           <img loading="lazy" src={main} alt="Intro" />
         </div>
       </div>
