@@ -1,18 +1,36 @@
 @use '../../../styles/mixins.scss' as *;
+@use '../../../styles/variables' as *;
 
 .introduct {
   padding: 30px 0;
   &-about {
     @include flex (column, flex-start, left, nowrap, 10px);
+    padding: 0 0 30px;
   }
   &-btns {
-    @include flex (row, center, center, nowrap, 20px)
-
+    @include flex (row, center, center, nowrap, 20px);
+    div {
+      padding: 10px 0;
+      text-align: center;
+      border: 1px solid;
+      width: 145px;
+      border-radius: 8px;
+      cursor: pointer;
+      &:hover {
+        background: transparent;
+        color: $accent-color;
+      }
+    }
+    .accent {
+      background: $accent-color;
+    }
+  }
+  &-img {
+    img {
+      max-width: 400px;
+      border-radius: 8px;
+    }
   }
 }
 
-.introduct-img {
-  img {
-    max-width: 400px;
-  }
-}
+
