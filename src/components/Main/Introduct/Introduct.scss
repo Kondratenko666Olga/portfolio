@@ -1,6 +1,15 @@
 @use '../../../styles/mixins.scss' as *;
 
+.introduct {
+  padding: 30px 0;
+  &-about {
+    @include flex (column, flex-start, left, nowrap, 10px);
+  }
+  &-btns {
+    @include flex (row, center, center, nowrap, 20px)
 
+  }
+}
 
 .introduct-img {
   img {
