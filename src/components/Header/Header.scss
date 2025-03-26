@@ -1,31 +1,47 @@
 @use '../../styles/main.scss' as *;
+@use '../../styles/variables' as *;
 
 header {
   padding: 15px 0;
   .container {
     @include flex(row, space-between, center, nowrap, 0);
+    position: relative;
   }
 }
 
 .menu-mob {
-  @include flex(column, center, center);
+  @include flex(column, center, center, nowrap, 10px);
+  border-right: 1px solid $text-main;
+  border-bottom: 1px solid $text-main;
+  box-shadow: 5px 5px 20px $accent-color;
+  border-radius: 5px;
+  background: $bg-dark;
+  padding: 20px;
+  position: absolute;
+  right: 70px;
+  top: 40px;
+
   display: none;
 }
-.burger svg{
+.burger svg {
   cursor: pointer;
+  border-right: 1px solid $text-main;
+  border-bottom: 1px solid $text-main;
+  box-shadow: 5px 5px 20px $accent-color;
+  border-radius: 150px;
   &:hover,
   &:active {
     stroke: #27ae60;
     path {
       stroke: #fff;
-    };
-    g[id="SVGRepo_bgCarrier"] path {
+    }
+    g[id='SVGRepo_bgCarrier'] path {
       fill: #27ae60;
-    };
+    }
   }
   @media (min-width: 768px) {
     display: none;
-}
+  }
 }
 .active {
   display: flex;
@@ -33,10 +49,9 @@ header {
 .menu {
   display: none;
   @media (min-width: 768px) {
-    @include flex (row, center, center,nowrap, 20px);
+    @include flex(row, center, center, nowrap, 20px);
     width: 100%;
     max-width: 330px;
     display: flex;
+  }
 }
-}
-

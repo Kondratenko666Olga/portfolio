@@ -3,12 +3,23 @@
 
 .introduct {
   padding: 30px 0;
+  .container {
+    @include flex(column, center, center, wrap, 20px);
+    @media (min-width: 768px) {
+      @include flex(row, space-between, center, wrap, 20px);
+    }
+  }
   &-about {
-    @include flex (column, flex-start, left, nowrap, 10px);
+    @include flex(column, center, center, nowrap, 15px);
     padding: 0 0 30px;
+    @media (min-width: 768px) {
+      @include flex(column, flex-start, flex-start, nowrap, 50px);
+      flex: 1 1 350px;
+      padding: 0 0 0 60px;
+    }
   }
   &-btns {
-    @include flex (row, center, center, nowrap, 20px);
+    @include flex(row, center, center, nowrap, 20px);
     div {
       padding: 10px 0;
       text-align: center;
@@ -26,11 +37,15 @@
     }
   }
   &-img {
+    flex: 1 1 200px;
+    border-radius: 200px;
     img {
       max-width: 400px;
       border-radius: 8px;
+      border-radius: 80px;
+      border-right: 1px solid $text-main;
+      border-bottom: 1px solid $text-main;
+      box-shadow: 5px 5px 20px $accent-color;
     }
   }
 }
-
-
