@@ -2,49 +2,52 @@
 @use '../../../styles/variables' as *;
 
 .about {
-    padding: 60px 0;
-    .container {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        .descr {
-            display: flex;
-            gap: 12px;
-            flex-direction: column;
-            .text {
-                line-height: 125%;
-            }
-        }
-        .social {
-            .slider {
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                flex-wrap: wrap;
-                gap: 12px;
-                .elem {
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    flex: 1 1 105px;
-                    gap: 12px;
-                    img {
-                        width: 70px;
-                    }
-                    span {
-                        text-align: center;
-                    }
-                }
-            }
-        }
-        @media (min-width: 720px) {
-            gap: 40px;
-            .descr {
-                align-items: center;
-                .text {
-                    text-align: center;
-                }
-            }
-        }
+  padding: 60px 0;
+
+  .container {
+    @include flex(column, flex-start, flex-start, nowrap, 20px);
+
+    .descr {
+      @include flex(column, flex-start, flex-start, nowrap, 12px);
+      .text {
+        line-height: 125%;
+      }
     }
+
+    .social {
+        margin: 0 auto;
+      .slider {
+        @include flex(row, center, flex-start, wrap, 12px);
+
+        .elem {
+          @include flex(column, center, center, nowrap, 12px);
+          flex: 1 1 150px;
+
+          .title {
+            text-align: center;
+          }
+
+          img {
+            width: 70px;
+          }
+
+          span {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    @media (min-width: 720px) {
+      gap: 40px;
+
+      .descr {
+        align-items: center;
+
+        .text {
+          text-align: center;
+        }
+      }
+    }
+  }
 }
