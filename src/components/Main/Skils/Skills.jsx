@@ -1,27 +1,24 @@
 import './Skiles.scss';
 
+const skillsData = [
+  { name: 'HTML', percent: '50%' },
+  { name: 'CSS', percent: '20%' },
+  { name: 'JAVASCRIPT', percent: '10%' },
+  { name: 'PHP', percent: '2%' },
+];
+
 const Skills = () => {
   return (
     <section className="skills" id="skills">
       <div className="container">
-        <h2 className="skills-title"></h2>
-        <div className="skills-block">
-          <div className="skills-block__elem">
-            <span className="skills-block__elem-num">50%</span>
-            <span className="skills-block__elem-name">HTML</span>
-          </div>
-          <div className="skills-block__elem">
-            <span className="skills-block__elem-num">20%</span>
-            <span className="skills-block__elem-name">CSS</span>
-          </div>
-          <div className="skills-block__elem">
-            <span className="skills-block__elem-num">10%</span>
-            <span className="skills-block__elem-name">JAVASCRIPT</span>
-          </div>
-          <div className="skills-block__elem">
-            <span className="skills-block__elem-num">2%</span>
-            <span className="skills-block__elem-name">PHP</span>
-          </div>
+        <h2 className="title">My Skills</h2>
+        <div className="block">
+          {skillsData.map((skill, index) => (
+            <div className="elem" key={index}>
+              <span className="num">{skill.percent}</span>
+              <span className="name">{skill.name}</span>
+            </div>
+          ))}
         </div>
       </div>
     </section>

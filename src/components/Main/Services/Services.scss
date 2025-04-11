@@ -4,6 +4,9 @@
 .services {
     padding: 60px 0;
     .container {
+        h2 {
+            padding: 0 0 20px;
+        }
         .block {
             @include flex(row, center, center, wrap, 12px );
             .elem {
