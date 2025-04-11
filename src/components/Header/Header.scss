@@ -31,12 +31,12 @@ header {
   border-radius: 150px;
   &:hover,
   &:active {
-    stroke: #27ae60;
+    stroke: $accent-color;
     path {
-      stroke: #fff;
+      stroke: $text-main;
     }
     g[id='SVGRepo_bgCarrier'] path {
-      fill: #27ae60;
+      fill: $accent-color;
     }
   }
   @media (min-width: 768px) {
