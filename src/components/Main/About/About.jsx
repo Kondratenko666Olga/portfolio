@@ -5,9 +5,9 @@ const About = () => {
   return (
     <section className="about" id="about">
       <div className="container">
-        <div className="about-descr">
-          <h2 className="about-descr__title">About</h2>
-          <p className="about-descr__text">
+        <div className="descr">
+          <h2 className="title">About</h2>
+          <p className="text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -16,26 +16,26 @@ const About = () => {
             pariatur. Excepteur sint occaecat cupidatat non proident
           </p>
         </div>
-        <div className="about-social">
-          <div className="about-social__slider">
-            <div className="about-social__slider-elem">
+        <div className="social">
+          <div className="slider">
+            <div className="elem">
               <img loading="lazy" src={about} alt="decoration icon" />
-              <h3 className="slider-elem__title">Full Name</h3>
+              <h3 className="title">Full Name</h3>
               <span>Your name goes here</span>
             </div>
-            <div className="about-social__slider-elem">
+            <div className="elem">
               <img loading="lazy" src={about} alt="decoration icon" />
-              <h3 className="slider-elem__title">Email Address</h3>
+              <h3 className="title">Email Address</h3>
               <span>Your email goes here</span>
             </div>
-            <div className="about-social__slider-elem">
+            <div className="elem">
               <img loading="lazy" src={about} alt="decoration icon" />
-              <h3 className="slider-elem__title">Twitter</h3>
+              <h3 className="title">Twitter</h3>
               <span>Your email goes here</span>
             </div>
-            <div className="about-social__slider-elem">
+            <div className="elem">
               <img loading="lazy" src={about} alt="decoration icon" />
-              <h3 className="slider-elem__title">Phone</h3>
+              <h3 className="title">Phone</h3>
               <span>Your name goes here</span>
             </div>
           </div>
