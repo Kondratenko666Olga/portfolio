@@ -31,3 +31,11 @@ button {
     outline: 4px auto -webkit-focus-ring-color;
   }
 }
+
+@media (min-width: 720px) {
+  .title {
+    font-size: 38px;
+    text-align: center;
+    padding: 0 0 40px;
+  }
+}

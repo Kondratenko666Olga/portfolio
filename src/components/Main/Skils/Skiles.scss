@@ -2,43 +2,48 @@
 @use '../../../styles/variables' as *;
 
 .skills {
-    padding: 60px 0;
-    .container {
-        h2 {
-            padding: 0 0 20px;
-        }
-        .block {
-            @include flex(row, center, center, wrap, 12px );
-            background: $bg-gray;
-            .elem {
-                @include flex(column, center, center, nowrap, 8px);
-                flex: 1 1 150px;
-                max-width: 350px;
-                width: 100%;
-                padding: 20px;
-                span {
-                    color: $text-gray;
-                    font-size: 28px;
-                }
-            }
-        }
-        @media (min-width: 720px) {
-            h2 {
-                font-size: 38px;
-                text-align: center;
-                padding: 0 0 40px;
-            }
-            .block {
-                align-items: flex-start;
-                .elem {
-                    gap: 20px;
-                    min-height: 240px;
-                    padding: 30px 40px;
-                    span {
-                        font-size: 34px;
-                    }
-                }
-            }            
-        }
+  padding: 60px 0;
+
+  &-title {
+    padding: 0 0 20px;
+  }
+  &-block {
+    @include flex(row, center, center, wrap, 12px);
+    background: $bg-gray;
+    &__elem {
+      @include flex(column, center, center, nowrap, 8px);
+      flex: 1 1 150px;
+      max-width: 350px;
+      width: 100%;
+      padding: 20px;
+      &-name {
+        color: $text-gray;
+        font-size: 28px;
+        text-align: center;
+      }
     }
+  }
+}
+
+@media (min-width: 720px) {
+  .skills {
+    padding: 60px 0;
+
+    &-title {
+      font-size: 38px;
+      text-align: center;
+      padding: 0 0 40px;
+    }
+    &-block {
+      align-items: flex-start;
+      &__elem {
+        gap: 20px;
+        min-height: 240px;
+        padding: 30px 40px;
+        span {
+          font-size: 34px;
+        }
+      }
+    }
+  }
 }

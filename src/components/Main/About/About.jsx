@@ -1,48 +1,52 @@
 import './About.scss';
-import about from '../../../images/icons/about.svg';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import aboutSocialData from './aboutSocialData';
 
-const About = () => {
+export default function About() {
   return (
     <section className="about" id="about">
       <div className="container">
-        <div className="descr">
-          <h2 className="title">About</h2>
-          <p className="text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident
-          </p>
-        </div>
-        <div className="social">
-          <div className="slider">
-            <div className="elem">
-              <img loading="lazy" src={about} alt="decoration icon" />
-              <h3 className="title">Full Name</h3>
-              <span>Your name goes here</span>
-            </div>
-            <div className="elem">
-              <img loading="lazy" src={about} alt="decoration icon" />
-              <h3 className="title">Email Address</h3>
-              <span>Your email goes here</span>
-            </div>
-            <div className="elem">
-              <img loading="lazy" src={about} alt="decoration icon" />
-              <h3 className="title">Twitter</h3>
-              <span>Your email goes here</span>
-            </div>
-            <div className="elem">
-              <img loading="lazy" src={about} alt="decoration icon" />
-              <h3 className="title">Phone</h3>
-              <span>Your name goes here</span>
-            </div>
+        <div className="about-inner">
+          <div className="about-descr">
+            <h2 className="about-descr__title title">About</h2>
+            <p className="about-descr__text">
+              My name is Olha, and I am a junior Frontend Developer. I work with
+              HTML, CSS/SCSS, JavaScript, and React to build adaptive and
+              user-friendly interfaces. Thanks to completing a Full Stack
+              course, I also have an understanding of backend principles and
+              client-server interaction, which helps me see a project as a
+              whole.
+              <br />
+              On this page, you can explore some of my individual and team
+              projects, as well as learn more about me. If you are interested in
+              collaboration, please fill out the contact form — I will get back
+              to you as soon as possible.
+            </p>
+          </div>
+          <div className="about-social">
+            {aboutSocialData.map((item, index) => (
+              <div className="about-social__elem" key={index}>
+                <img loading="lazy" src={item.img} alt="decoration icon" />
+                <h3 className="about-social__elem-subtitle">{item.title}</h3>
+                <span>
+                  {item.link ? (
+                    <a
+                      href={item.link}
+                      target={item.targetBlank ? '_blank' : '_self'}
+                      rel={item.targetBlank ? 'noopener noreferrer' : undefined}
+                    >
+                      {item.content}
+                    </a>
+                  ) : (
+                    item.content
+                  )}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
     </section>
   );
-};
-
-export default About;
+}

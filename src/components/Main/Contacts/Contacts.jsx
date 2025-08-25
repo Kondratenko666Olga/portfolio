@@ -4,7 +4,9 @@ const Contacts = () => {
   return (
     <section className="contacts" id="contacts">
       <div className="container">
-        <h2 className="contacts-title"></h2>
+        <h2 className="title">
+          Please leave your contact details so that I can get back to you.
+        </h2>
         <div className="contacts-form">
           <form
             className="register-form"

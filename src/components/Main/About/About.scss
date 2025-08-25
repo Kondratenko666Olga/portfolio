@@ -1,52 +1,43 @@
 @use '../../../styles/mixins.scss' as *;
 @use '../../../styles/variables' as *;
-
 .about {
   padding: 60px 0;
-
-  .container {
+  &-inner {
     @include flex(column, flex-start, flex-start, nowrap, 20px);
-
-    .descr {
-      @include flex(column, flex-start, flex-start, nowrap, 12px);
-      .text {
-        line-height: 125%;
+  }
+  &-descr {
+    @include flex(column, flex-start, flex-start, nowrap, 12px);
+    &__text {
+      line-height: 125%;
+      text-align: justify;
+    }
+  }
+  &-social {
+    margin: 0 auto;
+    @include flex(row, center, flex-start, wrap, 16px);
+    width: 100%;
+    &__elem {
+      @include flex(column, center, center, nowrap, 12px);
+      flex: 1 1 150px;
+      &-subtitle {
+        text-align: center;
+      }
+      img {
+        width: 70px;
+      }
+      span {
+        text-align: center;
       }
     }
-
-    .social {
-        margin: 0 auto;
-      .slider {
-        @include flex(row, center, flex-start, wrap, 12px);
-
-        .elem {
-          @include flex(column, center, center, nowrap, 12px);
-          flex: 1 1 150px;
-
-          .title {
-            text-align: center;
-          }
-
-          img {
-            width: 70px;
-          }
-
-          span {
-            text-align: center;
-          }
-        }
-      }
-    }
-
-    @media (min-width: 720px) {
+  }
+  @media (min-width: 720px) {
+    .about-inner {
       gap: 40px;
-
-      .descr {
-        align-items: center;
-
-        .text {
-          text-align: center;
-        }
+    }
+    .about-descr {
+      align-items: center;
+      &__text {
+        text-align: center;
       }
     }
   }

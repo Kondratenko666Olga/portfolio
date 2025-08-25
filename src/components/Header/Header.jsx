@@ -33,7 +33,9 @@ const Header = () => {
     <header>
       <div className="container">
         <div className="logo">
-          <img loading="lazy" src={logo} alt="Logo" />
+          <a href="#">
+            <img loading="lazy" src={logo} alt="Logo" />
+          </a>
         </div>
         <div className="menu">
           <span className="menu-option">
