@@ -4,8 +4,8 @@ const aboutSocialData = [
   {
     img: about,
     title: 'Email Address',
-    content: 'kondrayenkoolga@gmail.com',
-    link: 'mailto:kondrayenkoolga@gmail.com',
+    content: 'kondratenkoolha3@gmail.com',
+    link: 'mailto:kondratenkoolha3@gmail.com',
   },
   {
     img: about,
