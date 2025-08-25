@@ -33,6 +33,26 @@
     text-align: center;
     font-size: 28px;
   }
+
+  &-form {
+    p {
+      text-align: center;
+      padding: 20px 0 0;
+
+      &.status-message {
+        font-weight: 500;
+        transition: color 0.3s ease;
+
+        &.success {
+          color: #4caf50; // зелений колір для успіху
+        }
+
+        &.error {
+          color: #f44336; // червоний колір для помилки
+        }
+      }
+    }
+  }
 }
 
 @keyframes fadeIn {

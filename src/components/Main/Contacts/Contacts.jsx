@@ -6,7 +6,7 @@ import ReCAPTCHA from 'react-google-recaptcha';
 export default function Contacts({ onClose }) {
   const form = useRef();
   const recaptchaRef = useRef();
-  const [status, setStatus] = useState('');
+  const [status, setStatus] = useState(null);
   const [captchaValue, setCaptchaValue] = useState(null);
 
   // ✅ отримуємо ключі з env один раз при завантаженні компонента
@@ -30,14 +30,17 @@ export default function Contacts({ onClose }) {
     emailjs.sendForm(serviceID, templateID, form.current, publicKey).then(
       (result) => {
         console.log(result.text);
-        setStatus('Message sent successfully!');
+        setStatus({ message: 'Message sent successfully!', type: 'success' });
         e.target.reset();
         recaptchaRef.current.reset();
         setCaptchaValue(null);
       },
       (error) => {
         console.log(error.text);
-        setStatus('Failed to send message. Please try again.');
+        setStatus({
+          message: 'Failed to send message. Please try again.',
+          type: 'error',
+        });
       }
     );
   };
@@ -79,7 +82,11 @@ export default function Contacts({ onClose }) {
               />
               <button type="submit">Submit now</button>
             </form>
-            {status && <p>{status}</p>}
+            {status && (
+              <p className={`status-message ${status.type}`}>
+                {status.message}
+              </p>
+            )}
           </div>
         </div>
       </div>
