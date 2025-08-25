@@ -13,11 +13,7 @@ export default function Introduct({ onContactClick }) {
           <p>Frontend Developer</p>
           <div className="introduct-btns">
             <div className="cv-btn btn accent">
-              <a
-                href="/public/CV.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href="/CV.pdf" target="_blank" rel="noopener noreferrer">
                 Download CV
               </a>
             </div>
