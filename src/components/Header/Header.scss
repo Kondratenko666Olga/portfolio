@@ -16,6 +16,18 @@ header {
   }
 }
 
+.header-contact {
+  padding: 0;
+  background: none;
+  &:hover,
+  &:active {
+    text-decoration: none;
+    outline: none;
+    color: $accent-color;
+    background: none;
+  }
+}
+
 .menu-mob {
   @include flex(column, center, center, nowrap, 10px);
   border-right: 1px solid $text-main;

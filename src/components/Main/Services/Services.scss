@@ -2,47 +2,50 @@
 @use '../../../styles/variables' as *;
 
 .services {
-    padding: 60px 0;
-    .container {
-        h2 {
-            padding: 0 0 20px;
-        }
-        .block {
-            @include flex(row, center, center, wrap, 12px );
-            .elem {
-                @include flex(column, center, center, nowrap, 8px);
-                flex: 1 1 160px;
-                max-width: 350px;
-                width: 100%;
-                background: $bg-gray;
-                padding: 20px;
-                img {
-                    width: 60px;
-                }
-                span {
-                    color: $text-gray;
-                    font-size: 24px;
-                }
-            }
-        }
-        @media (min-width: 720px) {
-            h2 {
-                font-size: 38px;
-                text-align: center;
-                padding: 0 0 40px;
-            }
-            .block {
-                align-items: flex-start;
-                .elem {
-                    align-items: flex-start;
-                    gap: 20px;
-                    min-height: 240px;
-                    padding: 30px 40px;
-                    span {
-                        font-size: 30px;
-                    }
-                }
-            }            
-        }
+  padding: 60px 0;
+  .container {
+    h2 {
+      padding: 0 0 20px;
     }
+    .block {
+      @include flex(row, center, center, wrap, 12px);
+      .elem {
+        @include flex(column, center, center, nowrap, 8px);
+        flex: 1 1 230px;
+        max-width: 350px;
+        width: 100%;
+        background: $bg-gray;
+        padding: 20px;
+        img {
+          width: 60px;
+        }
+        span {
+          color: $text-gray;
+          font-size: 24px;
+          text-align: center;
+        }
+      }
+    }
+    @media (min-width: 768px) {
+      h2 {
+        font-size: 38px;
+        text-align: center;
+        padding: 0 0 40px;
+      }
+      .block {
+        align-items: flex-start;
+        justify-content: space-between;
+        .elem {
+          align-items: flex-start;
+          gap: 20px;
+          min-height: 240px;
+          padding: 30px 40px;
+          span {
+            font-size: 30px;
+            text-align: left;
+          }
+        }
+      }
+    }
+  }
 }

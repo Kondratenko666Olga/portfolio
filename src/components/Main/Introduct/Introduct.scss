@@ -20,7 +20,7 @@
   }
   &-btns {
     @include flex(row, center, center, nowrap, 20px);
-    div {
+    .btn {
       padding: 10px 0;
       text-align: center;
       border: 1px solid;
@@ -33,9 +33,10 @@
       }
     }
     .accent {
-      background: $accent-color;
+      background: transparent;
     }
   }
+
   &-img {
     flex: 1 1 200px;
     border-radius: 200px;

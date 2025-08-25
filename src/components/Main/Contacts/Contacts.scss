@@ -1,8 +1,49 @@
 @use '../../../styles/mixins.scss' as *;
 @use '../../../styles/variables' as *;
 
-.contacts-title {
-  text-align: center;
+.contacts {
+  position: fixed;
+  inset: 0; /* top:0, right:0, bottom:0, left:0 */
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+
+  &-inner {
+    position: relative;
+    background: $bg-gray;
+    padding: 40px 30px;
+    border-radius: 12px;
+    box-shadow: 5px 5px 15px -5px $accent-color;
+    animation: fadeIn 0.3s ease;
+  }
+  &-close {
+    position: absolute;
+    top: 12px;
+    right: 15px;
+    font-size: 28px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px;
+  }
+  &-title {
+    text-align: center;
+    font-size: 28px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .register-form {
@@ -14,4 +55,26 @@
 .input-group input,
 .input-group select {
   margin: 0 auto;
+  padding: 10px 15px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 5px $accent-color;
+
+  max-width: 320px;
+  width: 100%;
+}
+
+.input-group {
+  @include flex(column, center, center, nowrap, 12px);
+  margin: 20px 0;
+  max-width: 320px;
+  width: 100%;
+}
+
+button[type='submit'] {
+  max-width: 320px;
+  width: 100%;
+}
+
+.contacts-captcha {
+  margin: 0 0 20px 0;
 }

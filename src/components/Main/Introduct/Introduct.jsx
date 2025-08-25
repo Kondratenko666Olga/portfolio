@@ -1,7 +1,7 @@
 import './Introduct.scss';
 import main from '../../../images/main.webp';
 
-const Introduct = () => {
+export default function Introduct({ onContactClick }) {
   return (
     <section className="introduct">
       <div className="container">
@@ -12,12 +12,18 @@ const Introduct = () => {
           </h1>
           <p>Frontend Developer</p>
           <div className="introduct-btns">
-            <div className="accent">
-              <a href="">Download CV</a>
+            <div className="cv-btn btn accent">
+              <a
+                href="/public/CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download CV
+              </a>
             </div>
-            <div>
-              <a href="#contacts">Contact me</a>
-            </div>
+            <button className="contact-btn btn" onClick={onContactClick}>
+              Contact me
+            </button>
           </div>
         </div>
         <div className="introduct-img">
@@ -26,6 +32,4 @@ const Introduct = () => {
       </div>
     </section>
   );
-};
-
-export default Introduct;
+}
