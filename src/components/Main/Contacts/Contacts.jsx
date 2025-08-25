@@ -9,6 +9,12 @@ export default function Contacts({ onClose }) {
   const [status, setStatus] = useState('');
   const [captchaValue, setCaptchaValue] = useState(null);
 
+  // ✅ отримуємо ключі з env один раз при завантаженні компонента
+  const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+  const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
+  const recaptchaKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY;
+
   const handleCaptcha = (value) => {
     setCaptchaValue(value);
   };
@@ -20,10 +26,6 @@ export default function Contacts({ onClose }) {
       alert('Please verify that you are not a robot.');
       return;
     }
-
-    const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
     emailjs.sendForm(serviceID, templateID, form.current, publicKey).then(
       (result) => {
@@ -70,7 +72,7 @@ export default function Contacts({ onClose }) {
                 <input type="text" name="address" style={{ display: 'none' }} />
               </div>
               <ReCAPTCHA
-                sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+                sitekey={recaptchaKey} // ✅ тепер працює
                 onChange={handleCaptcha}
                 ref={recaptchaRef}
                 className="contacts-captcha"
