@@ -74,8 +74,7 @@ export default function Contacts({ onClose }) {
                 <input type="text" name="phone" placeholder="Phone number" />
                 <input type="text" name="address" style={{ display: 'none' }} />
               </div>
-              console.log("Recaptcha key:",
-              import.meta.env.VITE_RECAPTCHA_SITE_KEY);
+
               <ReCAPTCHA
                 sitekey={recaptchaKey}
                 onChange={handleCaptcha}
