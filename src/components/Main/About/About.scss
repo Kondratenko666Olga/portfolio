@@ -17,6 +17,8 @@
     @include flex(row, center, flex-start, wrap, 16px);
     width: 100%;
     &__elem {
+      text-decoration: none;
+      color: inherit;
       @include flex(column, center, center, nowrap, 12px);
       flex: 1 1 150px;
       &-subtitle {

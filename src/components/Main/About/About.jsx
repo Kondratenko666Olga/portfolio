@@ -1,6 +1,4 @@
 import './About.scss';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
 import aboutSocialData from './aboutSocialData';
 
 export default function About() {
@@ -25,25 +23,27 @@ export default function About() {
             </p>
           </div>
           <div className="about-social">
-            {aboutSocialData.map((item, index) => (
-              <div className="about-social__elem" key={index}>
-                <img loading="lazy" src={item.img} alt="decoration icon" />
-                <h3 className="about-social__elem-subtitle">{item.title}</h3>
-                <span>
-                  {item.link ? (
-                    <a
-                      href={item.link}
-                      target={item.targetBlank ? '_blank' : '_self'}
-                      rel={item.targetBlank ? 'noopener noreferrer' : undefined}
-                    >
-                      {item.content}
-                    </a>
-                  ) : (
-                    item.content
-                  )}
-                </span>
-              </div>
-            ))}
+            {aboutSocialData.map((item, index) =>
+              item.link ? (
+                <a
+                  key={index}
+                  className="about-social__elem"
+                  href={item.link}
+                  target={item.targetBlank ? '_blank' : '_self'}
+                  rel={item.targetBlank ? 'noopener noreferrer' : undefined}
+                >
+                  <img loading="lazy" src={item.img} alt="decoration icon" />
+                  <h3 className="about-social__elem-subtitle">{item.title}</h3>
+                  <span>{item.content}</span>
+                </a>
+              ) : (
+                <div className="about-social__elem" key={index}>
+                  <img loading="lazy" src={item.img} alt="decoration icon" />
+                  <h3 className="about-social__elem-subtitle">{item.title}</h3>
+                  <span>{item.content}</span>
+                </div>
+              )
+            )}
           </div>
         </div>
       </div>
