@@ -45,6 +45,9 @@ export default function Header({ onContactClick }) {
             <a href="#services">Services</a>
           </span>
           <span className="menu-option">
+            <a href="#projects">My projects</a>
+          </span>
+          <span className="menu-option">
             <button className="header-contact" onClick={onContactClick}>
               Contact me
             </button>
@@ -105,6 +108,9 @@ export default function Header({ onContactClick }) {
           </span>
           <span className="menu-option" onClick={() => setIsMenuOpen(false)}>
             <a href="#services">Services</a>
+          </span>
+          <span className="menu-option" onClick={() => setIsMenuOpen(false)}>
+            <a href="#projects">My projects</a>
           </span>
           <span className="menu-option" onClick={() => setIsMenuOpen(false)}>
             <button className="header-contact" onClick={onContactClick}>

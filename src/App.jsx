@@ -6,6 +6,7 @@ import About from './components/Main/About/About';
 import Services from './components/Main/Services/Services';
 import Skills from './components/Main/Skils/Skills';
 import Contacts from './components/Main/Contacts/Contacts';
+import Projects from './components/Main/Projects/Projects';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,6 +29,7 @@ function App() {
         <About />
         <Services />
         <Skills />
+        <Projects />
         {isModalOpen && <Contacts onClose={closeModal} />}
       </main>
       <Footer />

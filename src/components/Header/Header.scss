@@ -79,7 +79,7 @@ header {
   .menu {
     @include flex(row, center, center, nowrap, 20px);
     width: 100%;
-    max-width: 330px;
+    max-width: 420px;
     display: flex;
   }
 }
