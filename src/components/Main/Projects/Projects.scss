@@ -10,10 +10,80 @@
     flex: 1 1 320px;
     max-width: 420px;
     width: 100%;
+    perspective: 1000px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    &-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.6s ease;
+    }
+
+    &-inner.is-flipped {
+      transform: rotateY(180deg);
+    }
+
+    &-face {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      min-height: 360px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 6px 4px 10px -2px $accent-color;
+      background: transparent;
+    }
+
+    &-front {
+      transform: rotateY(0deg);
+    }
+
+    &-back {
+      position: absolute;
+      inset: 0;
+      transform: rotateY(180deg);
+      padding: 22px;
+      @include flex(column, flex-start, stretch, nowrap, 16px);
+
+      &__content {
+        @include flex(column, flex-start, stretch, nowrap, 12px);
+        flex: 1 1 auto;
+        min-height: 0;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        scrollbar-color: $accent-color transparent;
+
+        &::-webkit-scrollbar {
+          width: 8px;
+        }
+
+        &::-webkit-scrollbar-track {
+          background: transparent;
+          border-radius: 8px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: rgba($accent-color, 0.6);
+          border-radius: 8px;
+          border: 2px solid transparent; // create padding around thumb
+          background-clip: padding-box;
+        }
+
+        &::-webkit-scrollbar-thumb:hover {
+          background-color: $accent-color;
+        }
+      }
+
+      &__descr {
+        line-height: 1.5;
+        opacity: 0.9;
+      }
+    }
 
     &-img {
       display: flex;
@@ -23,11 +93,34 @@
     }
 
     &-info {
-      padding: 8px;
+      padding: 22px 12px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      &__text {
+        max-width: 60%;
+      }
+    }
+    &-btn {
+      font-size: 14px;
+      padding: 10px;
+    }
+    &-back > &-btn {
+      margin-top: auto; // keep Back button pinned to bottom
+    }
+    &-link {
+      color: $accent-color;
     }
   }
   &-title {
     padding: 0 0 20px;
+  }
+
+  .git-info {
+    @include flex(column, flex-start, flex-start, nowrap, 6px);
+    font-size: 12px;
   }
 
   @media (min-width: 768px) {
