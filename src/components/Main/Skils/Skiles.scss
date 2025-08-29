@@ -17,9 +17,10 @@
       width: 100%;
       padding: 20px;
       &-name {
-        color: $text-gray;
+        color: $accent-color;
         font-size: 28px;
         text-align: center;
+        text-shadow: 2px 2px 2px $bg-dark;
       }
     }
   }
@@ -27,6 +28,7 @@
 
 .swiper-wrapper {
   align-items: center;
+  transition-timing-function: ease-in-out;
 }
 
 @media (min-width: 720px) {

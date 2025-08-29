@@ -1,5 +1,6 @@
 import './Skiles.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 
 const skillsData = [
@@ -22,15 +23,24 @@ const Skills = () => {
         <h2 className="skills-title title">My Skills</h2>
         <div className="skills-block">
           <Swiper
+            modules={[Autoplay]}
             breakpoints={{
               359: { slidesPerView: 1.5 },
               768: { slidesPerView: 2.5 },
               1024: { slidesPerView: 3.5 },
             }}
-            loop="true"
+            loop={true}
             spaceBetween={5}
             slidesPerView={1}
             grabCursor={true}
+            speed={3000}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: false,
+              stopOnLastSlide: true,
+              waitForTransition: true,
+            }}
           >
             {skillsData.map((skill, index) => (
               <SwiperSlide key={index}>
